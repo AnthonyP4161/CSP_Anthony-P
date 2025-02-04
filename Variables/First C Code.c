@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-char myName;
-
-printf("Type your name and press enter:\n");
+char myName[];
 
 int main(void){
     printf("Hello World");
+    printf("Type your name and press enter: \n");
     return 0;
 }
