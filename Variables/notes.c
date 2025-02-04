@@ -9,6 +9,6 @@ int main(void){
     printf("%d\n", age);
     printf("%f\n", pi);
     printf("Hello I am %s. I am %d years old. I like the number %f. \n"); ()
-    return 0;
+return 0;
 }
 
