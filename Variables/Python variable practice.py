@@ -9,7 +9,7 @@ breakfast = input("What did you have for breakfast: ")
 school_subject = input("What is your favorite school subject: ")
 favorite_color = input("What is your favroite color: ")
 if name == "Rick Astley":
-    print("Wow, a real jokester, but guess what? I'm never gonna give you up, and I'm never going to let you down")
+    print("Wow, a real jokester, but guess what? I'm never gonna give you up, never going to let you down")
 else:
     print("Your name is", name, "and you go to",school_name)
 print("You are", age, "years old in", year)
