@@ -1,3 +1,4 @@
+# Anthony Petersen, Python Practice
 name = input("What is your name: ")
 school_name = input("What is your school name: ")
 number_out_of_ten = input("Pick a number between 1 and 10: ")

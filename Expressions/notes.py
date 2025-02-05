@@ -1,3 +1,4 @@
+#Anthony Petersen, Python Notes
 num = 4
 # print(num)
 num/= 2
