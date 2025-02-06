@@ -1,8 +1,6 @@
 #include <stdio.h>
-char name[20];
+char name[]; "Anthony"
 int main(void){
-    printf("Type your name: \n");
-    scanf("%s", name);
-    printf("Your name is: %s", name);
+    printf(name);
     return 0;
 }
