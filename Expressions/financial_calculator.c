@@ -1,4 +1,4 @@
-// Anthony Petersen, Template
+// Anthony Petersen, Financial Calculator
 #include <stdio.h>
 
 int main(void){
