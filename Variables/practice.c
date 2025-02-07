@@ -11,6 +11,15 @@ char eye_color[]: "Brown";
 char age[]: "14";
 char favorite_subject[]: "CSP";
 int main(void){
-    printf();
+    printf("%s", name);
+    printf("%s", number_10);
+    printf("%s", number_1000);
+    printf("%s", breakfast);
+    printf("%s", color);
+    printf("%s", school_name);
+    printf("%s", year);
+    printf("%s", eye_color);
+    printf("%s", age);
+    printf("%s", favorite_subject);
     return 0;
 }
