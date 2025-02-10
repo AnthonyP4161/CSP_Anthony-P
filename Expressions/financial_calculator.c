@@ -1,7 +1,7 @@
 // Anthony Petersen, Financial Calculator
 #include <stdio.h>
 
-int income;
+int income[];
 float rent[];
 float utilities[];
 float groceries[];
