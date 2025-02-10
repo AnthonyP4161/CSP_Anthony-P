@@ -11,17 +11,25 @@ int main(void){
 //welcome user and explains programs use
     printf("Welcome to your financial calculator, which will calculate your expenses, savings, and spending money \n");
 //have user input monthly income
-    printf("How is your monthly income: ");
+    printf("How much is your monthly income: ");
     scanf("%d", &income);
     printf("%d", income);
 //have user input cost of rent
-
+    printf("How much is your monthly rent cost: ");
+    scanf("%d", &rent);
+    printf("%d", rent);
 //have user input cost of utilities
-
+    printf("How much is your monthly utilities cost: ");
+    scanf("%d", &utilities);
+    printf("%d", utilities);
 //have user input cost of groceries
-
+    printf("How much is your monthly groceries cost: ");
+    scanf("%d", &groceries);
+    printf("%d", groceries);
 //have user input cost of transportation
-
+    printf("How much is your monthly transportation cost: ");
+    scanf("%d", &transportation);
+    printf("%d", transportation);
 //calculate how much they put into savings (10% of income)(income*.1)
 
 //calculate how much is spending(income minus savings and expenses)
