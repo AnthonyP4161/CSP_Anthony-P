@@ -2,6 +2,6 @@
 name = input("What is your name: ")
 
 if name == "Rick Astley":
-    print("Never Gonna Give You Up, Never Gonna Let You Down")
+    print("Hello", name, "Never Gonna Give You Up, Never Gonna Let You Down")
 else:
-    print("Wrong answer, try again")
+    print("Hello", name, "Welcome to my program")
