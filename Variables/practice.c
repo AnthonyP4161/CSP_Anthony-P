@@ -1,4 +1,4 @@
-// Anthony Petersen, Template
+// Anthony Petersen, C Variables Practice
 #include <stdio.h>
 char name[]= "Anthony";
 char number_10[]= "6";
