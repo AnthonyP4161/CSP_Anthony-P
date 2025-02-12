@@ -1,3 +1,4 @@
+//Anthony Petersen, C First Code
 #include <stdio.h>
 char name[1];
 int main(void){
