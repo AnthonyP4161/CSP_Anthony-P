@@ -8,6 +8,7 @@ income = float(input("What is your income in number amount: "))
 rent = float(input("How much does your rent cost: "))
 #have user input cost of utilities
 utilities = float(input("How much does your utilities such as power, water, etc. cost: "))
+utilities = "%.2f" % utilities
 #have user input cost of groceries
 groceries = float(input("How much do your groceries cost on average monthly: "))
 #have user input cost of transportation
@@ -28,6 +29,10 @@ percent_transportation = float(transportation/income *100)
 percent_savings = float(savings/income *100)
 #calculate percent of income used for spending (spending/income *100)
 percent_spending = float(spending_money/income *100)
+rent = "%.2f" % rent
+utilities = "%.2f" % utilities
+groceries = "%.2f" % groceries
+transportation = "%.2f" % transportation
 #print the following
 
     #your rent is $ which is % of your income
@@ -35,10 +40,10 @@ print("Your rent is", rent, "which is",percent_rent,"% of your income")
     #your utilities is $ which is % of your income
 print("Your utilties is", utilities, "which is",percent_utilities,"% of your income")
     #your groceries is $ which is % of your income
-print("Your groceries is", groceries, "which is",percent_groceries,"% of your income")
+print("Your groceries is $", groceries, "which is",percent_groceries,"% of your income")
     #your transportation is $ which is % of your income
-print("Your transportation is", transportation, "which is",percent_transportation,"% of your income")
+print("Your transportation is $", transportation, "which is",percent_transportation,"% of your income")
     #your savings is $ which is % of your income
-print("Your savings is", savings, "which is",percent_savings,"% of your income")
+print("Your savings is $", savings, "which is",percent_savings,"% of your income")
     #your spending is $ which is % of your income
 print("Your spending money leftover is", spending_money, "which is",percent_spending,"% of your income")
