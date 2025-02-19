@@ -1,4 +1,4 @@
-// Anthony Petersen, Udate Hello World
+// Anthony Petersen, Update Hello World
 #include <stdio.h>
 void hello(char name[50]){
     printf("Hello %s", name);
