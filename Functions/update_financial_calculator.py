@@ -13,7 +13,7 @@ spending = income - rent - utilities - groceries - transportation - savings
 
 def percentages(cost, income, type):
     percent = cost/income *100
-    print(f"Your {type} is ${cost:.2f} which is {percent:.2f}% of your income")
+    print(f"Your {type} is ${cost:.2f} which is {percent:.2f}% of your income \n")
 
 percentages(rent, income, "rent")
 percentages(utilities, income, "utilties")
