@@ -1,9 +1,8 @@
 #Anthony Petersen, Update Hello World
-def print_name():
-    name = input("What is your name: \n").strip().capitalize()
+def print_name(name):
     print("Hello", name)
-print_name()
-print_name()
-print_name()
-print_name()
-print_name()
+print_name("Joe")
+print_name("John")
+print_name("Jim")
+print_name("Jeff")
+print_name("Jack")
