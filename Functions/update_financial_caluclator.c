@@ -14,6 +14,9 @@ void inputs(char type[50], float *input){
     scanf("%f", input);
     return;
 }
+void percentage(char type[50], float *number){
+    float type = number/income *100;
+}
 int main(void){
     inputs("income", &income);
     inputs("rent", &rent);
