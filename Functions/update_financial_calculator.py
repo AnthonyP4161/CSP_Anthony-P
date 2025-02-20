@@ -2,5 +2,6 @@
 
 print("Welcome, this is a financial calculator to calculate your expenses, savings, and spendings")
 def inputs(type):
-    print(input("What is your {type} in a number amount: \n"))
-inputs("income")
+    input("What is your {type} in a number amount: \n")
+incom = inputs("income")
+rent = inputs("rent")
