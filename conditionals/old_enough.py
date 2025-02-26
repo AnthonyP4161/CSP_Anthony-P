@@ -1,3 +1,4 @@
+#Anthony Petersen, Old Enough
 age = float(input("How many years old are you: \n"))
 if(age >= 18):
     print("You can vote! \n")
