@@ -6,7 +6,7 @@ int num;
 int main(void){
     //How do you write an if statement in C?
     if(strcmp(name, "Anthony") == 0){;
-        printf("Hellow Anthony, welcome to class. \n");
+        printf("Hello Anthony, welcome to class. \n");
     //How do you write else statements in C?
     }else{
         printf("Hello %s, welcome to class. \n", name);
