@@ -1,4 +1,4 @@
-// Anthony Petersen, Template
+// Anthony Petersen, Time Of Day
 #include <stdio.h>
 #include <time.h>
 
