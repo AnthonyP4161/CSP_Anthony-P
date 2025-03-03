@@ -18,7 +18,7 @@ else:
     answers += "You entered " + question_2 + ", when the correct answer was among us.\n"
 
 
-question_3 = input(" Question 3 \nWho wears a mask with a smile, for hours at a time (P.S. They stare at a blank wall, well they hold back whats on their mind): \n").strip().lower()
+question_3 = input("Question 3 \nWho wears a mask with a smile, for hours at a time (P.S. They stare at a blank wall, well they hold back whats on their mind): \n").strip().lower()
 if question_3 == "dream":
     score = score+1
 else:
@@ -52,12 +52,19 @@ if question_7 == "lunchly":
 else:
     answers += "You entered " + question_7 + ", when the correct answer was lunchly. \n"
 
-print("You got a score of", score, "out of 5 \n")
+
+question_8 = input("Question 8 \nA term associated with one's ability to attract someone, short for charisma \n")
+if question_8 == "rizz":
+    score = score+1
+else:
+    answers += "You entered " + question_8 + ", when the correct answer was rizz. \n"
+    
+print("You got a score of", score, "out of 7 \n")
 
 
 review = input("If you would like to see the correct answer, type yes, otherwise type no \n")
 if review == "yes":
-    if score == 5:
+    if score == 7:
         print("You got everything right, so there's no wrong answers to show!")
     else:
         print((answers))
