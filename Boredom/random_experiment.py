@@ -6,7 +6,7 @@ print("Welcome to sigma guesser! You will try to guess the same number as Master
 try:  
     number = int(input("Please input a number between 1 and 100: \n"))
     if number == 123456789:
-        print(bot_number)
+        print("You entered the cheat code! The bots number is", bot_number)
     else:
         bot_number = bot_number
 except ValueError:  
