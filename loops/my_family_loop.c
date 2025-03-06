@@ -9,4 +9,4 @@ for(n=0;n<nlength;n++){
     printf("Hi %s\n", names[n]);
 }
     return 0;
-}
+}  
