@@ -3,10 +3,6 @@
 
 int main(void){
   
-
-    
-    
-
 //What is a loop? 
     //loops certain peices of code
 //What are the two types of loops?
@@ -17,7 +13,6 @@ int main(void){
         start++;
     }
     
-
     //for loop
     int q; 
     for(q=0;q<5;q++){

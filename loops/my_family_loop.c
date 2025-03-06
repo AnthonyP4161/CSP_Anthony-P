@@ -1,10 +1,9 @@
 // Anthony Petersen, My Family Loop
 #include <stdio.h>
-char names[][20] = {"Cami", "Alex", "Sierra"}; 
-printf("Hello %s\n", names[1]);
-int m;
-
 
 int main(void){
+    char names[][10] = {"Cami", "Alex", "Sierra"};
+printf("Hi %s!\n", names);
+int nlength = sizeof(names)/sizeof(names[0]);
     return 0;
 }
