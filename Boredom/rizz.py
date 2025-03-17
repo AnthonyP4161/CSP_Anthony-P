@@ -1,23 +1,24 @@
 import random
 number = random.randint(1,10)
 if number == 1:
-    word = "sigma"
+    word = "SIGMA!"
 elif number == 2:
-    word = "rizz"
+    word = "RIZZ!"
 elif number == 3:
-    word = "skibidi"
+    word = "SKIBIDI!"
 elif number == 4:
-    word = "ohio"
+    word = "OHIO!"
 elif number == 5:
-    word = "alpha"
+    word = "ALPHA!"
 elif number == 6:
-    word = "baby gronk"
+    word = "BABY GRONK!"
 elif number == 7:
-    word = "lunchly"
+    word = "LUNCHLY!"
 elif number == 8:
-    word = "kai cenat"
+    word = "KAI CENAT!"
 elif number == 9:
-    word = "property in egypt"
+    word = "PROPERTY IN EGYPT!"
 else:
-    word = "skibidi toilet"
-print("This will generate a random brain rot word\n",word)
+    word = "SKIBIDI TOILET!"
+print("This will generate a random brain rot word. Your word is...")
+print(word)
