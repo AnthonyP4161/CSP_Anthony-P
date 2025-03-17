@@ -59,9 +59,8 @@ if question_8 == "rizz":
 else:
     answers += "You entered " + question_8 + ", when the correct answer was rizz. \n"
     
-print("You got a score of", score, "out of", amount, "\n")
+print("You got a score of", score, "out of 8" "\n")
 
-amount = amount[question_]
 review = input("If you would like to see the correct answer, type yes, otherwise type no \n")
 if review == "yes":
     if score == 8:
