@@ -53,7 +53,7 @@ else:
     answers += "You entered " + question_7 + ", when the correct answer was lunchly. \n"
 
 
-question_8 = input("Question 8 \nA term associated with one's ability to attract someone, short for charisma \n")
+question_8 = input("Question 8 \nA term associated with one's ability to attract someone, short for charisma \n").strip().lower()
 if question_8 == "rizz":
     score = score+1
 else:
@@ -61,7 +61,7 @@ else:
     
 print("You got a score of", score, "out of 8" "\n")
 
-review = input("If you would like to see the correct answer, type yes, otherwise type no \n")
+review = input("If you would like to see the correct answer, type yes, otherwise type no \n").strip().lower()
 if review == "yes":
     if score == 8:
         print("You got everything right, so there's no wrong answers to show!")
