@@ -3,43 +3,42 @@
 import time
 import os
 import random
-memory_1 = random.randint(1,6)
-memory_2 = random.randint(1,6)
-memory_3 = random.randint(1,6)
-memory_4 = random.randint(1,6)
-memory_5 = random.randint(1,6)
-memory_6 = random.randint(1,6)
-memories = [memory_1, memory_2, memory_3, memory_4, memory_5, memory_6]
-while len(memories) == len(set(memories)):
+
+def start_game():
+    print("This is a memory game that will flash the numbers and you have to repeat them.")
     memory_1 = random.randint(1,6)
     memory_2 = random.randint(1,6)
     memory_3 = random.randint(1,6)
-    memory_4 = random.randint(1,6)
-    memory_5 = random.randint(1,6)
-    memory_6 = random.randint(1,6)
+    frames = [
+        """  
+        [ x ] [ x ] 
+        [ x ] [ x ]
+        [ x ] [ x ]
+        """,
 
-frames = [
-    """  
-    [ x ] [ x ] [ x ] [ x ]  
-    [ x ] [ x ] [ x ] [ x ]  
-    [ x ] [ x ] [ x ] [ x ]
-    """,
+        f"""
+        [ {memory_2} ] [ {memory_3} ] 
+        [ {memory_3} ] [ {memory_1} ]
+        [ {memory_1} ] [ {memory_2} ]
+        """,
 
-    f"""
-    [ {memory_1} ] [ {memory_5} ] [ {memory_2} ] [ {memory_3} ]  
-    [ {memory_2} ] [ {memory_6} ] [ {memory_1} ] [ {memory_4} ]  
-    [ {memory_3} ] [ {memory_4} ] [ {memory_6} ] [ {memory_5} ]  
-    """,
-
-    """  
-    [ x ] [ x ] [ x ] [ x ]  
-    [ x ] [ x ] [ x ] [ x ]  
-    [ x ] [ x ] [ x ] [ x ]
-    """,
-]  
-print("This is a memory game where you will try to remember what hidden cards match, and which ones dont. When you believe you have gotten the correct answer, type the numbers starting at the top left, and moving right as if reading a book. ")
-while input("Type yes to start the game, or type your answer: ") == "yes" or input != (memory_1, memory_5, memory_2, memory_3, memory_2, memory_6, memory_1, memory_4, memory_3, memory_4, memory_6, memory_5) or input != "skibidi sigma":
-    for frame in frames:
+        """  
+        [ x ] [ x ]  
+        [ x ] [ x ]  
+        [ x ] [ x ]
+        """,
+        ]
+    while input("Type yes to start the game, or type your answer: ") == "yes" or input != (memory_1, memory_2, memory_3, memory_2, memory_1, memory_3):
         os.system("cls" if os.name == "nt" else "clear")  # Clears screen for smooth animation
-        print(frame)
-        time.sleep(1)  # Adjust speed if needed
+        print(frames)
+        time.sleep(1)  # Adjust speed if needed'
+    return [memory_1, memory_2, memory_3]
+def check_guess(user_input, correct_guess):
+    if user_input == correct_guess:
+        print("Well done!")
+    else:
+        print("Try again!")
+start_game
+correct_sequence = start_game
+user_input = input("Please enter your answer: ").split()
+check_guess(user_input, correct_sequence)
