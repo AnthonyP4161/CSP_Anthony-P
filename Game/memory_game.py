@@ -28,7 +28,7 @@ def start_game():
         [ x ] [ x ]
         """,
         ]
-    while input("Type yes to start the game, or type your answer: ") == "yes" or input != (memory_1, memory_2, memory_3, memory_2, memory_1, memory_3):
+    while user_input == (memory_1, memory_2, memory_3, memory_2, memory_1, memory_3):
         os.system("cls" if os.name == "nt" else "clear")  # Clears screen for smooth animation
         print(frames)
         time.sleep(1)  # Adjust speed if needed'
