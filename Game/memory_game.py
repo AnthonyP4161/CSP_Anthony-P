@@ -34,8 +34,8 @@ def start_game():
         time.sleep(1)  # Pause for a moment to show the frame
         print("\033[F\033[K" * len(ANframes))
     return [ANmemory_2, ANmemory_3, ANmemory_3, ANmemory_1, ANmemory_1, ANmemory_2]
-def check_guess(ANuser_input, ANcorrect_guess):
-    if ANuser_input == ANcorrect_guess:
+def check_guess(ANuser_input, ANcorrect_sequence):
+    if ANuser_input == ANcorrect_sequence:
         print("Well done!")
         return("Well done!")
     else:
@@ -58,7 +58,7 @@ while True:
     ANuser_input = input("Enter your guess here: ")  # Collect input here  
     ANuser_input = [int(num) for num in ANuser_input.split()]  # Convert to list of integers  
   
-    if check_guess(ANuser_input, ANcorrect_sequence) == "Well done!":  
+    if check_guess(ANuser_input, ANcorrect_sequence) == "Well done!": 
         break  # Exit loop if correct  
 while True:  # Loop until the user guesses correctly
     ANcorrect_sequence = start_game()  # Display the frames and get the correct sequence
@@ -68,7 +68,5 @@ while True:  # Loop until the user guesses correctly
       
     try:
         ANuser_input = [int(num) for num in ANuser_input]  # Convert input to integers
-        if check_guess(ANuser_input, ANcorrect_sequence) == "Well done!":  # Check if the guess is correct
-            break  # Exit the loop if correct
     except ValueError:  
         print("Please enter numbers only!")  #If someone enters letters
