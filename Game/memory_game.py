@@ -3,7 +3,11 @@
 import time
 import os
 import random
+delay = 0.09
 ANuser_input = "nothing"
+ANinstructions = "This is a memory game that will flash the numbers and you have to repeat them.\n" \
+"Please press enter to begin \n"
+ANinstructions2 = "Please enter your answer, and remember to add spaces in between each number: \n"
 def start_game():
     ANmemory_1 = random.randint(1,9)
     ANmemory_2 = random.randint(1,9)
@@ -28,25 +32,43 @@ def start_game():
     for frame in ANframes:  
         print(frame)  
         time.sleep(1)  # Pause for a moment to show the frame
-        os.system("cls" if os.name == "nt" else "clear")  # Clear the screen
+        print("\066[F\033[K" * len(ANframes))
     return [ANmemory_2, ANmemory_3, ANmemory_3, ANmemory_1, ANmemory_1, ANmemory_2]
 def check_guess(ANuser_input, ANcorrect_guess):
     if ANuser_input == ANcorrect_guess:
         print("Well done!")
         return("Well done!")
     else:
+
         print("Try again!")
     
-print("This is a memory game that will flash the numbers and you have to repeat them.")
-ANBegin = input("Please type yes to begin: ")
-if ANBegin == "yes":
-    while True:  # Loop until the user guesses correctly
-        ANcorrect_sequence = start_game()  # Display the frames and get the correct sequence
-        ANuser_input = input("Please enter your answer, and remember to add spaces in between each number: ").split()  
+for char in ANinstructions:
+    print(char, end="")
+    time.sleep(delay)
+while True:
+    if input() == "":
+        break
+    else:
+        continue
+ANcorrect_sequence = start_game()  # Display the frames and get the correct sequence
+for char in ANinstructions2:
+    print(char, end="")
+    time.sleep(delay)
+while True:  
+    ANuser_input = input("Enter your guess here: ")  # Collect input here  
+    ANuser_input = [int(num) for num in ANuser_input.split()]  # Convert to list of integers  
+  
+    if check_guess(ANuser_input, ANcorrect_sequence) == "Well done!":  
+        break  # Exit loop if correct  
+while True:  # Loop until the user guesses correctly
+    ANcorrect_sequence = start_game()  # Display the frames and get the correct sequence
+    for char in ANinstructions2:
+        print(char, end="")
+        time.sleep(delay) 
       
-        try:  
-            ANuser_input = [int(num) for num in ANuser_input]  # Convert input to integers
-            if check_guess(ANuser_input, ANcorrect_sequence) == "Well done!":  # Check if the guess is correct
-                break  # Exit the loop if correct
-        except ValueError:  
-            print("Please enter numbers only!")  #If someone enters letters
+    try:
+        ANuser_input = [int(num) for num in ANuser_input]  # Convert input to integers
+        if check_guess(ANuser_input, ANcorrect_sequence) == "Well done!":  # Check if the guess is correct
+            break  # Exit the loop if correct
+    except ValueError:  
+        print("Please enter numbers only!")  #If someone enters letters
