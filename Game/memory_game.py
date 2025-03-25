@@ -3,9 +3,9 @@
 import time
 import os
 import random
-delay = 0.09
+delay = 0.02
 ANuser_input = "nothing"
-ANinstructions = "This is a memory game that will flash the numbers and you have to repeat them.\n" \
+ANinstructions = "This is a memory game that will display numbers\nIt is your job to remember them and repeat them\n" \
 "Please press enter to begin \n"
 ANinstructions2 = "Please enter your answer, and remember to add spaces in between each number: \n"
 def start_game():
@@ -32,7 +32,7 @@ def start_game():
     for frame in ANframes:  
         print(frame)  
         time.sleep(1)  # Pause for a moment to show the frame
-        print("\066[F\033[K" * len(ANframes))
+        print("\033[F\033[K" * len(ANframes))
     return [ANmemory_2, ANmemory_3, ANmemory_3, ANmemory_1, ANmemory_1, ANmemory_2]
 def check_guess(ANuser_input, ANcorrect_guess):
     if ANuser_input == ANcorrect_guess:
