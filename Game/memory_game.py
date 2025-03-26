@@ -3,7 +3,7 @@
 import time
 import os
 import random
-delay = 0.02
+delay = 0.0001
 ANuser_input = "nothing"
 ANinstructions = "This is a memory game that will display numbers\nIt is your job to remember them and repeat them\n" \
 "Please press enter to begin \n"
