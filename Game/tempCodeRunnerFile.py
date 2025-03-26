@@ -62,9 +62,10 @@ while True:
     except ValueError:      
         print("Please enter numbers only!")    
         continue           
-    if check_guess(ANuser_input, ANcorrect_sequence):
+    if check_guess(ANuser_input, ANcorrect_sequence):         
+        print("Well done!")  
         break
     else:  
-        print("Try again! Press Enter to continue again.\nPlease note, the numbers will be different")  
+        print("Try again! Press Enter to see the numbers again.")  
         input() 
-        ANcorrect_sequence = start_game()
+        ANcorrect_sequence = start_game() 
