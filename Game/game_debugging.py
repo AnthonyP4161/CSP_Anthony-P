@@ -21,7 +21,6 @@ code2 = str(code2_int)
 code3 = str(code3_int)
 
 code = code1 + code2 + code3
-print (code)
 
 # Tick Tack Toe - Jared Lewis
 def tic_tac_toe():
@@ -525,14 +524,16 @@ def keypad():
         game_selection()
     elif input_code == "Cheat code":
         print(code)
+        time.sleep(3)
         clear_terminal()
         keypad()
     elif input_code != code:
         print("Incorrect code.")
         keypad()
     elif input_code == code:
-        return False
+        return()
 #function for game selection
+
 def game_selection():
     # prints the map
     print(map)
@@ -579,10 +580,10 @@ game_selection()
 
 # next message
 clear_terminal()
-if keypad(True):
+if keypad("correct"):
     game_selection()
 else:
-    idk = 0
+    code = code
 
 message9 = "The metal sheet opens with a hiss, and you walk over to the door.\n"\
 "On the door, in bold red letters, you read, “DO NOT ENTER”\n"\
