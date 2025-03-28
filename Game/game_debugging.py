@@ -307,7 +307,7 @@ def hangman():
 #Anthony Petersen
 def memory():
     clear_terminal()
-    delay = 0.035
+    delay = 0.01
 
     ANinstructions = "This is a memory game that will flash the numbers and you have to repeat them.\n" \
                      "\n"\
@@ -435,7 +435,7 @@ def flashing_text3(stop_event):
 
 
 # sets the delay between each character printed
-delay = 0.04
+delay = 0.01
 
 
 # Clear the terminal
