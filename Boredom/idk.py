@@ -4,19 +4,19 @@ import threading
 import os
 import random
 player_block = """
-[   ()  ]
-[  -||- ]
-[  _||_ ]"""
+[   ()   ]
+[  -||-  ]
+[  _||_  ]"""
 
 empty = """
-[       ]
-[       ]
-[       ]"""
+[        ]
+[        ]
+[        ]"""
 
 rock = """
-[  ___  ]
-[ |   | ]
-[ |   | ]"""
+[  ____ ]
+[ |    | ]
+[ |    | ]"""
 
 
 def map_generation():
