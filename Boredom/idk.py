@@ -3,10 +3,11 @@ import sys
 import threading
 import os
 import random
+def start_game():
+    print("Welcome to my text based adventure. The map will be printed and you will be represented by a [Y], rocks which you cannot")
 map = "nothing"
 player_block =""" \
 [Y]"""
-
 
 empty = """ \
 [ ]"""
@@ -23,6 +24,7 @@ def map_generation():
     quadrant6 = random.randint(1,3)
     quadrant7 = random.randint(1,3)
     quadrant8 = random.randint(1,3)
+    quadrant9 = random.randint(1,3)
     if quadrant1 == 3:
         quadrant1 = rock
     else:
@@ -47,6 +49,17 @@ def map_generation():
         quadrant6 = rock
     else:
         quadrant6 = empty
-    map = print(player_block, quadrant1, quadrant2,"\n",
-          quadrant3, quadrant4, quadrant5)
+    if quadrant7 == 3:
+        quadrant7 = rock
+    else:
+        quadrant7 = empty
+    if quadrant8 == 3:
+        quadrant8 = rock
+    else:
+        quadrant8 = empty
+    if quadrant9 == 3:
+        quadrant9 = rock
+    else:
+        quadrant9 = empty
+    map = print("", player_block, quadrant2, quadrant3,"\n",quadrant4, quadrant5, quadrant6,"\n",quadrant7, quadrant8, quadrant9)
 map_generation()
