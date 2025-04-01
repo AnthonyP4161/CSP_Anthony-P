@@ -3,9 +3,21 @@ import sys
 import threading
 import os
 import random
+def flashing_text3(stop_event):
+    sys.stdout.write("\033[?25l")  # Hide the cursor
+    sys.stdout.flush()
+    while not stop_event.is_set():
+        sys.stdout.write("\rPress ENTER to continue.   ")
+        sys.stdout.flush()
+        time.sleep(0.5)
+        sys.stdout.write("\r                                ")  # Ensure the line is cleared properly
+        sys.stdout.flush()
+        time.sleep(0.5)
+    sys.stdout.write("\033[?25h")  # Show the cursor again
+    sys.stdout.flush()
+
 def start_game():
-    print("Welcome to my text based adventure. The map will be printed and you will be represented by a [Y], rocks which you cannot")
-map = "nothing"
+    print("Welcome to my text based adventure.\nThe map will be printed and your character will be represented by a [Y]\nRocks which you cannot pass through will be represented by [R]")
 player_block =""" \
 [Y]"""
 
@@ -57,6 +69,8 @@ def map_generation():
         quadrant9 = rock
     else:
         quadrant9 = empty
-    display_map = """{quadrant1} {quadrant2} """
-    map = print(display_map)
+    display_map = print(f"""{quadrant1} {quadrant2} {quadrant3}
+{quadrant4} {quadrant5} {quadrant6}
+{quadrant7} {quadrant8} {quadrant9}""")
+start_game()
 map_generation()
