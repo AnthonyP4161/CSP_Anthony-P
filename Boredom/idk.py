@@ -4,25 +4,16 @@ import threading
 import os
 import random
 delay = .01
-def flashing_text1(stop_event):
+def flashing_text1():
     sys.stdout.write("\033[?25l")  # Hide the cursor
-    sys.stdout.flush()
-    while not stop_event.is_set():
-        sys.stdout.write("\rPress ENTER to continue   ")
-        sys.stdout.flush()
-        time.sleep(0.5)
-        sys.stdout.write("\r                                ")  # Ensure the line is cleared properly
-        sys.stdout.flush()
-        time.sleep(0.5)
+    print("PRESS ENTER TO CONTINUE")
     sys.stdout.write("\033[?25h")  # Show the cursor again
-    sys.stdout.flush()
-message1 = "press enter to continue"
 
 def start_game():
     
     print("Welcome to my text based adventure.\nYour character will be represented by a [Y]\nRocks which you cannot pass through will be represented by [R]")
     stop_event = threading.Event()
-    thread = threading.Thread(target=flashing_text1, args=(stop_event,))
+    thread = threading.Thread(target=flashing_text1, args=())
     thread.start()
     input()
     stop_event.set()
