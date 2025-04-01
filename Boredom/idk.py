@@ -16,7 +16,6 @@ rock = """ \
 [R]"""
 
 def map_generation():
-    quadrant1 = random.randint(1,3)
     quadrant2 = random.randint(1,3)
     quadrant3 = random.randint(1,3)
     quadrant4 = random.randint(1,3)
@@ -25,10 +24,7 @@ def map_generation():
     quadrant7 = random.randint(1,3)
     quadrant8 = random.randint(1,3)
     quadrant9 = random.randint(1,3)
-    if quadrant1 == 3:
-        quadrant1 = rock
-    else:
-        quadrant1 = empty
+    quadrant1 = player_block
     if quadrant2 == 3:
         quadrant2 = rock
     else:
@@ -61,5 +57,6 @@ def map_generation():
         quadrant9 = rock
     else:
         quadrant9 = empty
-    map = print("", player_block, quadrant2, quadrant3,"\n",quadrant4, quadrant5, quadrant6,"\n",quadrant7, quadrant8, quadrant9)
+    display_map = """{quadrant1} {quadrant2} """
+    map = print(display_map)
 map_generation()
