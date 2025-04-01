@@ -22,25 +22,6 @@ code2 = str(code2_int)
 code3 = str(code3_int)
 
 code = code1 + code2 + code3
- 
-def play_music():        
-    pygame.init()          
-    pygame.mixer.init()        
-    try:    
-        pygame.mixer.music.load('computer-keyboard-typing-290582.mp3')            
-        pygame.mixer.music.play(-1)  # Loop the music    
-    except Exception as e:    
-        print("Error loading music:", e)    
- 
-try:        
-    import pygame
-    os.system("cls" if os.name == "nt" else "clear")        
-except ImportError:        
-    response = input("Pygame is not installed. Would you like to set it up for a better experience? (yes/no): ")        
-    if response.lower() == 'yes':    
-        print("Installing Pygame...")    
-        os.system('pip install pygame')    
-        input("Press Enter after installing Pygame to continue...")      
    
 # Ask if the user wants to play music  
 
