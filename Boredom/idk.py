@@ -48,6 +48,7 @@ rock = """ \
 [R]"""
 
 def map_generation():
+    quadrant1 = player_block
     quadrant2 = random.randint(1,3)
     quadrant3 = random.randint(1,3)
     quadrant4 = random.randint(1,3)
@@ -56,7 +57,6 @@ def map_generation():
     quadrant7 = random.randint(1,3)
     quadrant8 = random.randint(1,3)
     quadrant9 = random.randint(1,3)
-    quadrant1 = player_block
     if quadrant2 == 3:
         quadrant2 = rock
     else:
