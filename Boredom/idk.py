@@ -6,7 +6,6 @@ import random
 delay = .01
 message1 = "PRESS ENTER TO CONTINUE"
 
-
 def flashing_text1(stop_event):
     sys.stdout.write("\033[?25l")  # Hide the cursor
     sys.stdout.flush()
@@ -89,10 +88,42 @@ def map_generation():
         quadrant9 = rock
     else:
         quadrant9 = empty
- 
 
-    display_map = print(f"""{quadrant1}{quadrant2}{quadrant3}
+    while quadrant9 != player_block:
+        display_map = print(f"""{quadrant1}{quadrant2}{quadrant3}
 {quadrant4}{quadrant5}{quadrant6}
 {quadrant7}{quadrant8}{quadrant9}""")
+        position = 0
+        movement = input(print("Press W, A, S, and D to move, then click enter: ")).strip().upper()
+        if movement == "W":
+            position = position - 1
+        elif movement == "A":
+            position = position - 5
+        elif movement == "S":
+            position = position + 1
+        elif movement == "D":
+            position = position + 5
+        if position > 0:
+            print("Hey! You can't go there!")
+        if position == 0:
+            quadrant1 = player_block
+        elif position == 5:
+            quadrant2 = player_block
+        elif position == 10:
+            quadrant3 = player_block
+        elif position == 1:
+            quadrant4 = player_block
+        elif position == 6:
+            quadrant5 = player_block
+        elif position == 11:
+            quadrant6 = player_block
+        elif position == 2:
+            quadrant7 = player_block
+        elif position == 7:
+            quadrant8 = player_block
+        elif position == 12:
+            quadrant9 = player_block
+        os.system("cls" if os.name == "nt" else "clear")
+    #return quadrant1, quadrant2, quadrant3, quadrant4, quadrant5, quadrant6, quadrant7, quadrant8, quadrant9
 start_game()
 map_generation()
