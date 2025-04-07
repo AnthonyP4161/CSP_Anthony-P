@@ -4,6 +4,7 @@ import threading
 import os
 import random
 delay = .01
+previous_block = 0
 message1 = "PRESS ENTER TO CONTINUE"
 
 def flashing_text1(stop_event):
@@ -103,7 +104,8 @@ def map_generation():
           position = position + 1
         elif movement == "D":
             position = position + 5
-        if position > 0:
+            previous_block = position -5
+        if position < 0:
             print("Hey! You can't go there!")
         if position == 0:
             quadrant1 = player_block
