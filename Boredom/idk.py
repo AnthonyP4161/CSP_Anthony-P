@@ -98,9 +98,9 @@ def map_generation():
         if movement == "W":
             position = position - 1
         elif movement == "A":
-            position = position - 5
+           position = position - 5
         elif movement == "S":
-            position = position + 1
+          position = position + 1
         elif movement == "D":
             position = position + 5
         if position > 0:
@@ -123,7 +123,7 @@ def map_generation():
             quadrant8 = player_block
         elif position == 12:
             quadrant9 = player_block
-        os.system("cls" if os.name == "nt" else "clear")
+    os.system("cls" if os.name == "nt" else "clear")
     #return quadrant1, quadrant2, quadrant3, quadrant4, quadrant5, quadrant6, quadrant7, quadrant8, quadrant9
 start_game()
 map_generation()
