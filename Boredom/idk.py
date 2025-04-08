@@ -96,15 +96,27 @@ def map_generation():
 {quadrant7}{quadrant8}{quadrant9}""")
         position = 0
         movement = input(print("Press W, A, S, and D to move, then click enter: ")).strip().upper()
+        
+        
+        #Movement management
         if movement == "W":
             position = position - 1
+            previous_block = position + 1
         elif movement == "A":
            position = position - 5
+           previous_block = position + 5
         elif movement == "S":
           position = position + 1
+          previous_block = position - 1
         elif movement == "D":
             position = position + 5
             previous_block = position -5
+        
+        #Makes previous space empty
+        if previous_block == 0:
+            quadrant1 = empty
+        elif previous_block == 5:
+            quadrant2 = empty
         if position < 0:
             print("Hey! You can't go there!")
         if position == 0:
