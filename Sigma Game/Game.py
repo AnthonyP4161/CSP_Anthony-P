@@ -5,7 +5,7 @@ import random
 import threading
 delay = .01
 #Selecting difficulty of the game
-def difficulty_selection(gamemode):
+def difficulty_selection():
     return int(input("Before you begin, please enter the difficulty you would like to choose for your game.\nEnter 1 for easy, 2 for medium, or 3 for hard.\n"))
 
 
@@ -17,4 +17,3 @@ def instructions():
         time.sleep(delay)
     input()
 instructions()
-difficulty_selection()
