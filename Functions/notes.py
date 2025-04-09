@@ -4,8 +4,8 @@ numone = int(input("Please enter a number: \n"))
 numtwo = int(input("Please enter another number: \n"))
 def add(numone, numtwo):
     print(numone**numtwo)
-    return numone+numtwo
 add(numone,numtwo)
+print(numone)
 def values(type):
     return input(f"Please enter a {type}: \n")
 name = values("name").strip().capitalize()
