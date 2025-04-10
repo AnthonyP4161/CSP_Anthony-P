@@ -30,4 +30,4 @@ def difficulty_selection():
         difficulty = difficulty_selection()
         return difficulty
 difficulty = difficulty_selection()
-print(difficulty) 
+print(difficulty)
