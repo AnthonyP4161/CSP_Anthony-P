@@ -20,14 +20,14 @@ instructions()
 def difficulty_selection():
     difficulty = int(input("What difficulty would you like: "))
     if difficulty == 1:
-        return [difficulty]
+        return difficulty
     elif difficulty == 2:
-        return [difficulty]
+        return difficulty
     elif difficulty == 3:
-        return [difficulty]
+        return difficulty
     else:
         print("Thats not a valid input!")
-        difficulty_selection()
-difficulty_selection()
+        difficulty = difficulty_selection()
+        return difficulty
 difficulty = difficulty_selection()
-print(difficulty)
+print(difficulty) 
