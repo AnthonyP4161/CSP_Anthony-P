@@ -6,5 +6,6 @@
         "stdio.h": "c",
         "string.h": "c"
     },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "liveServer.settings.port": 5501
 }
