@@ -18,3 +18,6 @@ function pop(){
 function show(){
     document.getElementById("lost").style.display="block"
 }
+function reveal(){
+    document.getElementById("hidden").style.display="block"
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+Create a webpage about any school appropriate topic
+ (Needs to include an h1 at the top of the page, at least 2 paragraphs and image and a list) 
+ and hide an image in the webpage that will only appear when the user hovers over the correct spot
+ -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hidden Image</title>
+        <script src="notes.js"></script>
+        <style>
+            body{
+                margin:60px;
+                text-align:center;
+                background-color:black;
+                color:white;
+            }
+            ul{
+                text-align:left;
+                font-size:20px;
+            }
+            img{
+                width:400px;
+            }
+            #hidden{
+                display:none;
+                width:300px;
+            }
+            p{
+                font-size:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Why Star Wars Is The Best Franchise</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png"> 
+        <img id="hidden" onmouseover="reveal()" alt="hidden" src="https://static.wikia.nocookie.net/starwars/images/b/bb/Chopper_Live_Action.png/revision/latest/scale-to-width-down/1200?cb=20230620225311">
+        <p>Star Wars is a massive company, that is now owned by Disney.
+            Star Wars was a hit from the start, with the communities love for it never really getting low. 
+            Star Wars has done so much with its community that it's impact may never fade. 
+            Star Wars was originally made by George Lucas, with the first movie, Star Wars: A new Hope, originally just titled Star Wars was released. 
+            Disney obtained Star Wars in 2012, when George Lucas sold Lucasfilm to Disney for $4.05 billion dollars. 
+            Star Wars has an estimated $46.7 billion in revenue, including merchandise, movies, toys, etc.
+            </p>
+        <p>Star Wars has become such an iconic franchise, it has made it's way into other forms of media and entertainment. 
+            It's had multiple collaborations with popular video games and toys. Some of these include
+            <ul>
+                <li>Fortnite</li>
+                <li>Fall Guys</li>
+                <li>Rocket League</li> 
+                <li>Minecraft</li>
+                <li>LEGO</li>
+                <li>And many more</li> 
+            </ul>
+        </p>
+    </body>
+</html>
