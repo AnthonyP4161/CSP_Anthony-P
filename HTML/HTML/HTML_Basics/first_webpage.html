@@ -13,6 +13,7 @@ Use CSS grid and/or flexbox to structure your site
 
         <meta charset="UTF-8">
         <title>pugs</title>
+        <script src="first_webpage.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
         <style>
             body{
@@ -23,36 +24,55 @@ Use CSS grid and/or flexbox to structure your site
                 padding:10px;
                 margin:10px
             }
+
             .container{
                 display: inline-grid;
                 grid-template-rows:20% 20% 20% 20% 20%;
                 background-color:gray;
                 border:2px solid black
             }
+
             a{
                 background-color:transparent;
             }
+
             li{
                 text-align:center
             }
+
             #img{
-                width:15%
+                width:25%
+            }
+
+            #hidden{
+                color:rgb(0, 0, 107);
+            }
+
+            #invisible{
+                margin:12px;
+                display:none;
             }
             
         </style>
     </head>
     <body>
         <h1>Pugs: The Best Dog Ever</h1>
-        <img id="img" src="https://images.vexels.com/media/users/3/300494/isolated/preview/e94c110b68f40df08116e06f9f5e22f2-cute-pug-dog-sitting-down.png">
+        
+        <img id="img" onmouseenter="hover()" onmouseleave="leave()" src="https://images.vexels.com/media/users/3/300494/isolated/preview/e94c110b68f40df08116e06f9f5e22f2-cute-pug-dog-sitting-down.png">
+        
         <p>Image by <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vexels.com%2Fpng-svg%2Fpreview%2F300494%2Fcute-pug-dog-sitting-down&psig=AOvVaw1oZQ1ozFF0yvaGvpYXh9DY&ust=1744903370810000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJiBsd7t3IwDFQAAAAAdAAAAABAE">Vexels</a></p>
+        
         <h2>A Brief History</h2>
+        
         <p>Pugs originated in China around 400 B.C.
             Pugs average lifespan is 11-15.
             Pugs usually experience multiple health problems due to being bread to purposely have shorter snouts.
             Some of these problems include bad eyesight, or trouble breathing.
             Pugs are generally pretty chubby for their size, with their typical breed weight being 14-18 pounds but can be as heavy as 30 pounds before being classified as overweight!</p>
         <br>
+        
         <h2>Basic Facts About Pugs</h2>
+        
         <div class="container">
             <ul>
                 <li><div>Pugs fur can have silver, apricot, fawn, or black fur</div></li>
@@ -70,8 +90,14 @@ Use CSS grid and/or flexbox to structure your site
         According to <a href="https://www.purina.com/dogs/dog-breeds/pug#:~:text=The%20Pug's%20motto%20is%20the,perfectly%20describing%20this%20small%20breed.">Purina</a>, pugs are often referred to as "multum in parvo" which is latin for "much in little."
         This is referring to pugs big personalites but their small size, as pugs are very expressive and sensitive, and they can often sense their owners' moods.
         </p>
+        
         <img id="img" src="https://static.vecteezy.com/system/resources/thumbnails/048/051/017/small_2x/a-pug-dog-is-standing-on-its-hind-legs-on-transparent-background-png.png">
+        
         <p>Image by <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-png%2Fpug&psig=AOvVaw1BXXh3j4AVU8cNoCj7rWAY&ust=1744903750058000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCJjitpTv3IwDFQAAAAAdAAAAABAp">Vecteezy</a></p>
         
+        <button id="btn" onclick="reveal()">Click to learn more. Or don't.</button>
+        <p id="hidden"></p>
+        <img id="invisible" src="https://www.pngall.com/wp-content/uploads/5/Kawaii-Pug-PNG-File.png">
+
     </body>
 </html
