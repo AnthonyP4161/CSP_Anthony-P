@@ -19,5 +19,5 @@ function show(){
     document.getElementById("lost").style.display="block"
 }
 function reveal(){
-    document.getElementById("hidden").src ="https://static.wikia.nocookie.net/starwars/images/b/bb/Chopper_Live_Action.png/revision/latest/scale-to-width-down/1200?cb=20230620225311"
+    document.getElementById("hidden").style.display ="block"
 }
