@@ -1,6 +1,12 @@
 function reveal(){
-    document.getElementById("invisible").style.display = "block" 
-    document.getElementById("hidden").innerHTML = "Hi"
+    var x = document.getElementById("invisible")
+    var y = document.getElementById("hidden").innerHTML = "Hi";
+    if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    
     
 }
 
