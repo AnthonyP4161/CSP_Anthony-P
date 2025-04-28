@@ -1,0 +1,60 @@
+<!--
+Create a website for something, or somewhere fun to go in Utah, this should be a vacation level fun (not just a store, this should be something that people come from out of state to do!). This website needs to include:
+
+A header tag for the place
+A paragraph (3 sentence minimum) describing the place and why it is a good one to visit
+A list with at least 4 reasons why someone should go there
+3 images of the site
+The CSS needs to change:
+
+The background color
+text color
+font style
+gives margin and padding around things
+Use flexbox and or CSS Grid to structure the page
+The JavaScript needs to:
+
+Allow users to view or hide additional content (at least an image and a paragraph)
+Create at least one hoverable image
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta CHARSET="UTF-8">
+        <Title>Staycation</Title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quintessential">
+        <style>
+            body{
+                flex:20% 20% 20% 20% 20%;
+                font-family:"quintessential", sans-serif;
+                text-align:center;
+                background-color:sienna;
+                color:white;
+            }
+            h1{
+                font-size:60px;
+            }
+            #title{
+                padding:20px;
+                margin-top:0px;
+                background-color:gray;
+                border:5px solid black
+            }
+            #info1{
+                margin-right:500px;
+                margin-left:30px;
+                background-color:gray;
+                border:5px solid black;
+                font-size:30px
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="title">Canyonlands National Park</h1>
+        <div id="info1">
+            <p>Canyonlands is a national park located near Moab, Utah</p>
+            <p>The nearest airports are Grand Junction Regional Airport, with the second closest being Salt Lake City International Airport.</p>
+        </div>
+    </body>
+</html>
