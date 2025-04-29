@@ -25,36 +25,76 @@ Create at least one hoverable image
         <Title>Staycation</Title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quintessential">
         <style>
+            .grid-container{
+                padding:50px;
+                display:grid;
+                grid-template-rows:20% 20% 20% 20% 20%;
+                grid-template-columns: 20% 20% 20% 20% 20%;
+            }
+
+            .image1{
+                grid-column: 5/5;
+                grid-row: 3/3;
+            }
+
+            .credits1{
+                grid-column: 5/5;
+                grid-row:5/5
+            }
+            
+            .info1{
+                grid-row:1/1
+            }
+
+            .info2{
+                grid-row:2/2
+            }
+
             body{
-                flex:20% 20% 20% 20% 20%;
                 font-family:"quintessential", sans-serif;
                 text-align:center;
                 background-color:sienna;
                 color:white;
             }
+
             h1{
                 font-size:60px;
             }
+
             #title{
                 padding:20px;
                 margin-top:0px;
                 background-color:gray;
                 border:5px solid black
             }
+
             #info1{
-                margin-right:500px;
-                margin-left:30px;
+                margin-right:15px;
+                margin-left:15px;
                 background-color:gray;
                 border:5px solid black;
-                font-size:30px
+                font-size:30px;
+
             }
+
+            #image1{
+                width:400px;
+                border:3px solid black;
+            }
+
+            #credits{
+                font-size:smaller;
+            }
+
         </style>
     </head>
     <body>
         <h1 id="title">Canyonlands National Park</h1>
-        <div id="info1">
-            <p>Canyonlands is a national park located near Moab, Utah</p>
-            <p>The nearest airports are Grand Junction Regional Airport, with the second closest being Salt Lake City International Airport.</p>
+        <div class="grid-container" id="info1">
+            <div class="info1"><p>Canyonlands is a national park located near Moab, Utah</p></div><br>
+            <div class="info2"><p>The nearest airports are Grand Junction Regional Airport, with the second closest being Salt Lake City International Airport.</p></div>
+            <div class="image1"><img id="image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Green_River_Overlook_Ekker_Butte.jpg/1920px-Green_River_Overlook_Ekker_Butte.jpg"></div>
+            <div class="credits1"><p id="credits"><span>Image by au-ears on wikipedia</span></p></div>
         </div>
     </body>
 </html>
