@@ -1,19 +1,20 @@
 <!--
-Create a website for something, or somewhere fun to go in Utah, this should be a vacation level fun (not just a store, this should be something that people come from out of state to do!). This website needs to include:
+Create a website for something, or somewhere fun to go in Utah, this should be a vacation level fun (not just a store, this should be something that people come from out of state to do!).
 
+This website needs to include:
 A header tag for the place
 A paragraph (3 sentence minimum) describing the place and why it is a good one to visit
 A list with at least 4 reasons why someone should go there
 3 images of the site
-The CSS needs to change:
 
+The CSS needs to change:
 The background color
 text color
 font style
 gives margin and padding around things
 Use flexbox and or CSS Grid to structure the page
-The JavaScript needs to:
 
+The JavaScript needs to:
 Allow users to view or hide additional content (at least an image and a paragraph)
 Create at least one hoverable image
 -->
@@ -26,7 +27,7 @@ Create at least one hoverable image
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quintessential">
         <style>
             .grid-container{
-                padding:50px;
+                padding:20px;
                 display:grid;
                 grid-template-rows:20% 20% 20% 20% 20%;
                 grid-template-columns: 20% 20% 20% 20% 20%;
@@ -34,7 +35,7 @@ Create at least one hoverable image
 
             .image1{
                 grid-column: 5/5;
-                grid-row: 3/3;
+                grid-row: 2/2;
             }
 
             .credits1{
@@ -43,13 +44,26 @@ Create at least one hoverable image
             }
             
             .info1{
-                grid-row:1/1
-            }
-
-            .info2{
+                background-color:rgb(110, 110, 110);
+                border:2px solid black;
+                grid-column:1/4;
                 grid-row:2/2
             }
 
+            .info2{
+                background-color:rgb(110, 110, 110);
+                border:2px solid black;
+                border-top:0px;
+                grid-column:1/4;
+                grid-row:3/3;
+            }
+            .info3{
+                background-color:rgb(110, 110, 110);
+                border:2px solid black;
+                border-top:0px;
+                grid-column:1/4;
+                grid-row:4/4;
+            }
             body{
                 font-family:"quintessential", sans-serif;
                 text-align:center;
@@ -61,6 +75,13 @@ Create at least one hoverable image
                 font-size:60px;
             }
 
+            #btn{
+                font-family:"quintessential", sans-serif;
+                text-align:center;
+                background-color:gray;
+                color:white;
+
+            }
             #title{
                 padding:20px;
                 margin-top:0px;
@@ -68,7 +89,7 @@ Create at least one hoverable image
                 border:5px solid black
             }
 
-            #info1{
+            #information1{
                 margin-right:15px;
                 margin-left:15px;
                 background-color:gray;
@@ -82,6 +103,11 @@ Create at least one hoverable image
                 border:3px solid black;
             }
 
+            #hidden{
+                color:white;
+                background-color:rgb(110, 110, 110);
+                display:none;
+            }
             #credits{
                 font-size:smaller;
             }
@@ -90,11 +116,14 @@ Create at least one hoverable image
     </head>
     <body>
         <h1 id="title">Canyonlands National Park</h1>
-        <div class="grid-container" id="info1">
-            <div class="info1"><p>Canyonlands is a national park located near Moab, Utah</p></div><br>
-            <div class="info2"><p>The nearest airports are Grand Junction Regional Airport, with the second closest being Salt Lake City International Airport.</p></div>
-            <div class="image1"><img id="image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Green_River_Overlook_Ekker_Butte.jpg/1920px-Green_River_Overlook_Ekker_Butte.jpg"></div>
-            <div class="credits1"><p id="credits"><span>Image by au-ears on wikipedia</span></p></div>
+        <div class="grid-container" id="information1">
+            <div class="info1"><p>Canyonlands is a national park located near Moab, Utah. with around a four hour drive from Salt Lake City Airport.</p></div>
+            <div class="info2"><p>Canyonlands consists of a deserty area. </p></div>
+            <div class="info3"><p>The colorado river winds through the canyons, carving a curving path through the rock.</p>
         </div>
+            <div class="image1"><img id="image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Green_River_Overlook_Ekker_Butte.jpg/1920px-Green_River_Overlook_Ekker_Butte.jpg"></div>
+            <div class="credits1"><p id="credits">Image by au-ears on wikipedia</p></div>
+        </div>
+
     </body>
 </html>
