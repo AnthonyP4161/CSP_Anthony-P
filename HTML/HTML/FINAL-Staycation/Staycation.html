@@ -24,6 +24,7 @@ Create at least one hoverable image
     <head>
         <meta CHARSET="UTF-8">
         <Title>Staycation</Title>
+        <script src="Staycation.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quintessential">
         <style>
             .grid-container{
@@ -35,6 +36,18 @@ Create at least one hoverable image
 
             .image1{
                 grid-column: 5/5;
+                grid-row: 2/2;
+            }
+
+            .grid-container{
+                padding:20px;
+                display:grid;
+                grid-template-rows:20% 20% 20% 20% 20%;
+                grid-template-columns: 20% 20% 20% 20% 20%;
+            }
+
+            .image2{
+                grid-column: 4/4;
                 grid-row: 2/2;
             }
 
@@ -64,6 +77,14 @@ Create at least one hoverable image
                 grid-column:1/4;
                 grid-row:4/4;
             }
+
+            #title2{
+                padding:20px;
+                margin-top:10px;
+                background-color:gray;
+                border:5px solid black
+            }
+            
             body{
                 font-family:"quintessential", sans-serif;
                 text-align:center;
@@ -89,7 +110,7 @@ Create at least one hoverable image
                 border:5px solid black
             }
 
-            #information1{
+            #information{
                 margin-right:15px;
                 margin-left:15px;
                 background-color:gray;
@@ -100,6 +121,11 @@ Create at least one hoverable image
 
             #image1{
                 width:400px;
+                border:3px solid black;
+            }
+
+            #image2{
+                height:150px;
                 border:3px solid black;
             }
 
@@ -116,13 +142,22 @@ Create at least one hoverable image
     </head>
     <body>
         <h1 id="title">Canyonlands National Park</h1>
-        <div class="grid-container" id="information1">
+        <div class="grid-container" id="information">
             <div class="info1"><p>Canyonlands is a national park located near Moab, Utah. with around a four hour drive from Salt Lake City Airport.</p></div>
             <div class="info2"><p>Canyonlands consists of a deserty area. </p></div>
             <div class="info3"><p>The colorado river winds through the canyons, carving a curving path through the rock.</p>
         </div>
             <div class="image1"><img id="image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Green_River_Overlook_Ekker_Butte.jpg/1920px-Green_River_Overlook_Ekker_Butte.jpg"></div>
-            <div class="credits1"><p id="credits">Image by au-ears on wikipedia</p></div>
+            <div class="credits1"><p id="credits">Image by au-ears on wikipedia.org</p></div>
+        </div>
+
+        <div class="grid-container" id="information">
+            <div class="info1"><p>Canyonlands offers many hikes, ranging from super short to potentially mutiple days of hiking.</p></div>
+            <div class="info2"><p>Canyonlands consists of a deserty area. </p></div>
+            <div class="info3"><p>The colorado river winds through the canyons, carving a curving path through the rock.</p>
+        </div>
+            <div class="image2"><img id="image2" src="https://www.nps.gov/cany/planyourvisit/images/_DSC4737.jpg?maxwidth=1300&maxheight=1300&autorotate=false"></div>
+            <div class="credits1"><p id="credits">Image by Neal Herbert on nps.gov</p></div>
         </div>
 
     </body>
