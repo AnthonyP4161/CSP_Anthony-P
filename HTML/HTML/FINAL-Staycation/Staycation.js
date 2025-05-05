@@ -6,3 +6,8 @@ function reveal(){
       x.style.display = "none";
     }
 }
+
+function image_show(){
+  document.getElementById("image2").src= "https://www.ulumresorts.com/app/uploads/2023/04/shutterstock_1801854883.jpg"
+
+}
