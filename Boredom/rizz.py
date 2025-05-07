@@ -20,5 +20,5 @@ elif number == 9:
     word = "PROPERTY IN EGYPT!"
 else:
     word = "SKIBIDI TOILET!"
-print("This will generate a random brain rot word. Your word is...")
+print("This will generate a random brain rot phrase. Your phrase is...")
 print(word)
