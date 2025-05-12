@@ -2,9 +2,11 @@ function reveal(){
     if (document.getElementById("hidden").src === "https://www.nps.gov/cany/planyourvisit/images/_DSC4737.jpg?maxwidth=1300&maxheight=1300&autorotate=false") {
       document.getElementById("hidden").src= "https://www.ulumresorts.com/app/uploads/2023/04/shutterstock_1801854883.jpg";
       document.getElementById("credits").innerHTML = "Image by ulumresorts.com"
+      document.getElementById("invisible").style.display = "grid"
     } else {
       document.getElementById("hidden").src = "https://www.nps.gov/cany/planyourvisit/images/_DSC4737.jpg?maxwidth=1300&maxheight=1300&autorotate=false";
       document.getElementById("credits").innerHTML = "Image by Neal Herbert on nps.gov"
+      document.getElementById("invisible").style.display = "none"
     }
 }
 

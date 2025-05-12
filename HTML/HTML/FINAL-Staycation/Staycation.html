@@ -131,6 +131,17 @@ Create at least one hoverable image
 
             }
 
+            #invisible{
+                padding-bottom:70px;
+                margin-right:15px;
+                margin-left:15px;
+                margin-bottom:20px;
+                background-color:gray;
+                border:5px solid black;
+                font-size:30px;
+                display:none
+            }
+
             #image1{
                 width:400px;
                 border:3px solid black;
@@ -138,6 +149,11 @@ Create at least one hoverable image
 
             #image2{
                 height:130px;
+                border:3px solid black;
+            }
+
+            #image3{
+                height:350px;
                 border:3px solid black;
             }
 
@@ -186,6 +202,15 @@ Create at least one hoverable image
             </div>
             <div class="image2"><img id="hidden" src="https://www.nps.gov/cany/planyourvisit/images/_DSC4737.jpg?maxwidth=1300&maxheight=1300&autorotate=false"></div>
             <div class="credits1"><p id="credits">Image by Neal Herbert on nps.gov</p></div>
+        </div>
+
+        <div class="grid-container" id="invisible">
+            <div class="info1"><p>Canyonlands is approximately 227,598 acres.</p></div>
+            <div class="info2"><p>Canyonlands consits of three districts: Island in the Sky, Needles, and Maze.</p></div>
+            <div class="info3"><p>There's over 273 different bird species found in Canyonlands!</p></div>
+        
+            <div class="image1"><img id="image3" onmouseenter="hover()" onmouseleave="leave()" src="https://gotbooks.miracosta.edu/gonp/cany/images/cany.gif"></div>
+            <div class="credits1"><p id="credits1">Image by gotbooks.miracosta.edu</p></div>
         </div>
 
     </body>
